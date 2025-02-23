@@ -40,9 +40,9 @@ getgenv().IS_ASTROSPLOIT_LOADED = false
 local oldr = request 
 getgenv().request = function(options)
 	if options.Headers then
-		options.Headers["User-Agent"] = "Astrosploit/RobloxApp/" .. synversion
+		options.Headers["User-Agent"] = "Astrosploit/RobloxApp/" .. execver
 	else
-		options.Headers = {["User-Agent"] = "Astrosploit/RobloxApp/" .. synversion}
+		options.Headers = {["User-Agent"] = "Astrosploit/RobloxApp/" .. execver}
 	end
 	local response = oldr(options)
 	return response
