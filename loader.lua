@@ -2161,4 +2161,5 @@ check("setrbxclipboard", function()
     setrbxclipboard = setclipboard
 end)
 
-print("[ Astrosploit ENV ] Script successfully executed!")
+print("[ Astrosploit Info ] Loaded functions! Executing UI now.")
+
