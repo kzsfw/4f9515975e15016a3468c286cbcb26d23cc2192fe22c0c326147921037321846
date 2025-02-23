@@ -85,6 +85,9 @@ getgenv().require = function(scr) -- not mine
 	end
 end
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/astrosploit/refs/heads/main/ui.lua"))()
+print("[ Astrosploit Info ] UI Loaded! Enjoy!")
+
 getgenv().shared = shared 
 local renv = {
 	print = print, warn = warn, error = error, shared = shared, assert = assert, collectgarbage = collectgarbage, require = require,
@@ -2161,6 +2164,6 @@ check("setrbxclipboard", function()
     setrbxclipboard = setclipboard
 end)
 
-print("[ Astrosploit Info ] Loaded functions! Executing UI now.")
+print("[ Astrosploit Info ] Loaded functions!")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/astrosploit/refs/heads/main/ui.lua"))()
 print("[ Astrosploit Info ] UI Loaded! Enjoy!")
