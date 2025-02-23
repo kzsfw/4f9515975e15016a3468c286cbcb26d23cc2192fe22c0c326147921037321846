@@ -1,7 +1,7 @@
 --[[
   // Astrosploit Environment
   // Made by the Astrosploit devs.
-  // (most of it was made by raz <3)
+  // (most of it was made by raz & salad <3)
   // If you use this and don't credit us, we can DMCA you.
   // - The Astrosploit Developers
 ]]
@@ -2162,4 +2162,5 @@ check("setrbxclipboard", function()
 end)
 
 print("[ Astrosploit Info ] Loaded functions! Executing UI now.")
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/astrosploit/refs/heads/main/ui.lua"))()
+print("[ Astrosploit Info ] UI Loaded! Enjoy!")
