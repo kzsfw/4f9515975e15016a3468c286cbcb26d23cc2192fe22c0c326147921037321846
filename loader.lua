@@ -2165,5 +2165,5 @@ check("setrbxclipboard", function()
 end)
 
 print("[ Astrosploit Info ] Loaded functions!")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/astrosploit/refs/heads/main/ui.lua"))()
-print("[ Astrosploit Info ] UI Loaded! Enjoy!")
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/astrosploit/refs/heads/main/ui.lua"))()
+--print("[ Astrosploit Info ] UI Loaded! Enjoy!")
