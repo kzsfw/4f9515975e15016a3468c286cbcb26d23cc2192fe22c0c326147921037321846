@@ -85,8 +85,8 @@ getgenv().require = function(scr) -- not mine
 	end
 end
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/astrosploit/refs/heads/main/ui.lua"))()
-print("[ Astrosploit Info ] UI Loaded! Enjoy!")
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/astrosploit/refs/heads/main/ui.lua"))()
+--print("[ Astrosploit Info ] UI Loaded! Enjoy!")
 
 getgenv().shared = shared 
 local renv = {
