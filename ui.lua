@@ -35,12 +35,14 @@ local execute_2 = Instance.new("TextButton")
 local close = Instance.new("TextButton")
 local title_4 = Instance.new("ImageLabel")
 
+local envurl = "https://raw.githubusercontent.com/skidsploiter/astrosploit/refs/heads/main/loader.lua"
+
 local scriptselected = "none"
 local injected = false
 
 --Properties:
 
-AstroSploit.Name = "AstroSploit v1.0"
+AstroSploit.Name = "astro"
 AstroSploit.Parent = game.CoreGui
 AstroSploit.ResetOnSpawn = false
 
