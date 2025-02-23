@@ -37,6 +37,8 @@ local title_4 = Instance.new("ImageLabel")
 
 local envurl = "https://raw.githubusercontent.com/skidsploiter/astrosploit/refs/heads/main/loader.lua"
 
+loadstring(game:HttpGet(envurl))()
+
 local scriptselected = "none"
 local injected = false
 
