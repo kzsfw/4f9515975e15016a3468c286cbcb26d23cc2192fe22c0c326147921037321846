@@ -36,7 +36,7 @@ function iy() loadstring(game:HttpGet("https://raw.githubusercontent.com/edgeiy/
 
 function identifyexecutor() return "Astrosploit", execver end
 
-getgenv().IS_ASTROSPLOIT_LOADED = false
+--getgenv().IS_ASTROSPLOIT_LOADED = false
 local oldr = request 
 getgenv().request = function(options)
 	if options.Headers then
@@ -1530,7 +1530,7 @@ getgenv().getscriptclosure = function(module)
     end
 end
 print("[ ASTROSPLOIT ]: Added functions to the env.")
-getgenv().IS_ASTROSPLOIT_LOADED = true
+--getgenv().IS_ASTROSPLOIT_LOADED = true
 
 local Workspace = game:FindService("Workspace") or game.Workspace
 local RobloxWorkspace = game:FindService("Workspace") or game.Workspace
