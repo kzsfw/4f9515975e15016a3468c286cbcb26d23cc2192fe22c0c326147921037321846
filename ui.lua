@@ -1,4 +1,4 @@
-local AstroSploit = Instance.new("ScreenGui")
+local AstroWare = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local bar = Instance.new("Frame")
 local Close = Instance.new("TextButton")
@@ -44,12 +44,12 @@ local injected = false
 
 --Properties:
 
-AstroSploit.Name = "astro"
-AstroSploit.Parent = game.CoreGui
-AstroSploit.ResetOnSpawn = false
+AstroWare.Name = "astro"
+AstroWare.Parent = game.CoreGui
+AstroWare.ResetOnSpawn = false
 
 MainFrame.Name = "MainFrame"
-MainFrame.Parent = AstroSploit
+MainFrame.Parent = AstroWare
 MainFrame.Active = true
 MainFrame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 MainFrame.BorderSizePixel = 0
@@ -77,7 +77,7 @@ Close.Text = "X"
 Close.TextColor3 = Color3.fromRGB(255, 255, 255)
 Close.TextSize = 14.000
 Close.MouseButton1Click:Connect(function()
-    AstroSploit:Destroy()
+    AstroWare:Destroy()
 end)
 
 ImageLabel.Parent = MainFrame
@@ -236,7 +236,7 @@ title.BackgroundTransparency = 1.000
 title.Position = UDim2.new(0.330062926, 0, 0.00625000056, 0)
 title.Size = UDim2.new(0, 200, 0, 22)
 title.Font = Enum.Font.SourceSans
-title.Text = "AstroSploit - v1.0.0"
+title.Text = "AstroWare - v1.0.0"
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.TextSize = 16.000
 
@@ -263,7 +263,7 @@ execute.MouseButton1Click:Connect(function()
         loadstring(Source.Text)()
     end
     if injected == false then
-        title.Text = "AstroSploit - v1.0.0 (not injected! press attach)"
+        title.Text = "AstroWare - v1.0.0 (not injected! press attach)"
     end
 end)
 
@@ -311,25 +311,25 @@ Attach.TextSize = 14.000
 Attach.MouseButton1Click:Connect(function()
     print("hi")
     if injected == true then
-        title.Text = "AstroSploit - v1.0.0 (already injected!)"
+        title.Text = "AstroWare - v1.0.0 (already injected!)"
         wait(1)
-        title.Text = "AstroSploit - v1.0.0"
+        title.Text = "AstroWare - v1.0.0"
     end
     if injected == false then
-        title.Text = "AstroSploit - v1.0.0 (checking...)"
+        title.Text = "AstroWare - v1.0.0 (checking...)"
         wait(0.1)
-        title.Text = "AstroSploit - v1.0.0 (injecting...)"
+        title.Text = "AstroWare - v1.0.0 (injecting...)"
         wait(1.5)
         setfpscap(1)
         wait(1)
         setfpscap(6969)
-        title.Text = "AstroSploit - v1.0.0 (checking whitelist...)"
+        title.Text = "AstroWare - v1.0.0 (checking whitelist...)"
         wait(0.8)
-        title.Text = "AstroSploit - v1.0.0 (scanning...)"
+        title.Text = "AstroWare - v1.0.0 (scanning...)"
         wait(0.3)
-        title.Text = "AstroSploit - v1.0.0 (ready!)"
+        title.Text = "AstroWare - v1.0.0 (ready!)"
         wait(0.5)
-        title.Text = "AstroSploit - v1.0.0"
+        title.Text = "AstroWare - v1.0.0"
         injected = true
     end
 end)
@@ -345,7 +345,7 @@ title_2.Image = "http://www.roblox.com/asset/?id=132776683490024"
 title_2.ImageRectSize = Vector2.new(138, 167)
 
 scripthub_2.Name = "scripthub"
-scripthub_2.Parent = AstroSploit
+scripthub_2.Parent = AstroWare
 scripthub_2.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 scripthub_2.BorderSizePixel = 0
 scripthub_2.Position = UDim2.new(0.433135211, 0, 0.502979755, 0)
@@ -472,7 +472,7 @@ title_3.BackgroundTransparency = 1.000
 title_3.Position = UDim2.new(0.161097407, 0, -0.000307376496, 0)
 title_3.Size = UDim2.new(0, 200, 0, 22)
 title_3.Font = Enum.Font.SourceSans
-title_3.Text = "AstroSploit - Script Hub"
+title_3.Text = "AstroWare - Script Hub"
 title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 title_3.TextSize = 16.000
 title_3.ZIndex = 110
