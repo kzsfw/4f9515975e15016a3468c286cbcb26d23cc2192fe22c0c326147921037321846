@@ -29,8 +29,7 @@ if not killSwitch() then return end
 execver = "V1"
 function getexecutorname() return "Astro-Ware" end
 
--- makesit fucked ->> loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/kernel-ui/refs/heads/main/env.lua"))() -- env
--- SaladAPI ENV Enhancer | thanks to discord.gg/getsalad
+-- SaladAPI ENV | thanks to discord.gg/getsalad
 
 function iy() loadstring(game:HttpGet("https://raw.githubusercontent.com/edgeiy/infiniteyield/master/source"))() end
 
