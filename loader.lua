@@ -1,7 +1,7 @@
 --[[
   // ASTROWARE Environment
   // Made by the ASTROWARE devs.
-  // (most of it was made by raz & salad <3)
+  // (all of it was made by raz & salad <3)
   // If you use this and don't credit us, we can DMCA you.
   // - The ASTROWARE Developers
 ]]
