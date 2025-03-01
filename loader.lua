@@ -1,22 +1,22 @@
 --[[
-  // Astrosploit Environment
-  // Made by the Astrosploit devs.
+  // ASTROWARE Environment
+  // Made by the ASTROWARE devs.
   // (most of it was made by raz & salad <3)
   // If you use this and don't credit us, we can DMCA you.
-  // - The Astrosploit Developers
+  // - The ASTROWARE Developers
 ]]
 
 --[[
 CURRENT: ENV Version 1
 ]]
--- Made for Astrosploit
+-- Made for ASTROWARE
 
 WORKING = true -- true to enable script
 
 function killSwitch()
     if not WORKING then
         game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = ">[ASTROSPLOIT V1]<";
+            Title = ">[ASTROWARE V1]<";
             Text = "Sorry, the exploit is killswitched. Try again later!";
             Duration = 5;
         })
@@ -27,22 +27,22 @@ end
 
 if not killSwitch() then return end
 execver = "V1"
-function getexecutorname() return "Astrosploit" end
+function getexecutorname() return "Astro-Ware" end
 
 -- makesit fucked ->> loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/kernel-ui/refs/heads/main/env.lua"))() -- env
 -- SaladAPI ENV Enhancer | thanks to discord.gg/getsalad
 
 function iy() loadstring(game:HttpGet("https://raw.githubusercontent.com/edgeiy/infiniteyield/master/source"))() end
 
-function identifyexecutor() return "Astrosploit", execver end
+function identifyexecutor() return "Astro-Ware", execver end
 
---getgenv().IS_ASTROSPLOIT_LOADED = false
+--getgenv().IS_ASTROWARE_LOADED = false
 local oldr = request 
 getgenv().request = function(options)
 	if options.Headers then
-		options.Headers["User-Agent"] = "Astrosploit/RobloxApp/" .. execver
+		options.Headers["User-Agent"] = "AstroWare/RobloxApp/" .. execver
 	else
-		options.Headers = {["User-Agent"] = "Astrosploit/RobloxApp/" .. execver}
+		options.Headers = {["User-Agent"] = "AstroWare/RobloxApp/" .. execver}
 	end
 	local response = oldr(options)
 	return response
@@ -67,7 +67,7 @@ getgenv().require = function(scr) -- not mine
 	assert(type(scr) == "number" or (typeof(scr) == "Instance" and scr.ClassName == "ModuleScript"), "Expected")
 	if (type(scr) == "number") then 
 		if not game:GetObjects('rbxassetid://' .. scr)[1] then 
-			warn("[ ASTROSPLOIT ]: Require failed: invalid asset ID")
+			warn("[ ASTROWARE ]: Require failed: invalid asset ID")
 			return 
 		end
 		if typeof(game:GetObjects('rbxassetid://' .. scr)[1]) == "Instance" and game:GetObjects('rbxassetid://' .. scr)[1].ClassName == "ModuleScript" then
@@ -75,18 +75,18 @@ getgenv().require = function(scr) -- not mine
 				if game:GetObjects('rbxassetid://' .. scr)[1].Source ~= "" then 
 					return loadstring(game:GetObjects('rbxassetid://' .. scr)[1].Source)()
 				else 
-					warn("[ ASTROSPLOIT ]: Require failed: cant require a modulescript with no code")
+					warn("[ ASTROWARE ]: Require failed: cant require a modulescript with no code")
 				end
 			else 
-				warn("[ ASTROSPLOIT ]: Require failed: require asset id failed")
+				warn("[ ASTROWARE ]: Require failed: require asset id failed")
 			end
 		end
 		return
 	end
 end
 
---loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/astrosploit/refs/heads/main/ui.lua"))()
---print("[ Astrosploit Info ] UI Loaded! Enjoy!")
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/ASTROWARE/refs/heads/main/ui.lua"))()
+--print("[ ASTROWARE Info ] UI Loaded! Enjoy!")
 
 getgenv().shared = shared 
 local renv = {
@@ -226,9 +226,9 @@ end, function()
 end)
 
 check("getaffiliateid", function()
-    return "ASTROSPLOIT"
+    return "ASTROWARE"
 end, function()
-    assert(getgenv().getaffiliateid() == "ASTROSPLOIT", "getaffiliateid function test failed")
+    assert(getgenv().getaffiliateid() == "ASTROWARE", "getaffiliateid function test failed")
 end)
 
 check("getplayer", function(name: string)
@@ -913,7 +913,7 @@ function Bridge:InternalRequest(body, timeout)
 			return
 		end
 
-		error("[ASTROSPLOIT Error]: Unknown error", 2)
+		error("[ASTROWARE Error]: Unknown error", 2)
 		return
 	end
 
@@ -947,10 +947,10 @@ function Bridge:InternalRequest(body, timeout)
 	end)
 
 	if success and result then
-		error("[ASTROSPLOIT Error]: " .. tostring(result), 2)
+		error("[ASTROWARE Error]: " .. tostring(result), 2)
 	end
 
-	error("[ASTROSPLOIT Error]: Unknown server error", 2)
+	error("[ASTROWARE Error]: Unknown server error", 2)
 end
 
 function Bridge:request(options)
@@ -981,7 +981,7 @@ function Bridge:request(options)
 	end
 	return {
 		Success = false,
-		StatusMessage = "[ASTROSPLOIT Error]: webServer connection failed:  " .. self.serverUrl,
+		StatusMessage = "[ASTROWARE Error]: webServer connection failed:  " .. self.serverUrl,
 		StatusCode = 599;
 		HttpError = Enum.HttpError.ConnectFail
 	}
@@ -1022,17 +1022,17 @@ if not shared.vulnsm then
 	end
 	getgenv().rconsoleclear = function()
 		Bridge:rconsole("cls") 
-		rconsolesettitle("ASTROSPLOIT is NOT fat!")
+		rconsolesettitle("ASTROWARE is NOT fat!")
 	end
 	
 	getgenv().rconsolecreate = function()
 		Bridge:rconsole("crt")
-		rconsolesettitle("ASTROSPLOIT is NOT fat!")
+		rconsolesettitle("ASTROWARE is NOT fat!")
 	end
 	
 	getgenv().rconsoledestroy = function()
 		Bridge:rconsole("dst")
-		rconsolesettitle("ASTROSPLOIT is NOT fat!")
+		rconsolesettitle("ASTROWARE is NOT fat!")
 	end
 	
 	getgenv().rconsoleprint = function(...)
@@ -1041,7 +1041,7 @@ if not shared.vulnsm then
 			text = text .. tostring(v) .. " "
 		end
 		Bridge:rconsole("prt", text)
-		rconsolesettitle("ASTROSPLOIT is NOT fat!")
+		rconsolesettitle("ASTROWARE is NOT fat!")
 	end
 	
 	getgenv().rconsoleinfo = function(...)
@@ -1050,7 +1050,7 @@ if not shared.vulnsm then
 			text = text .. tostring(v) .. " "
 		end
 		Bridge:rconsole("prt", "[ INFO ] " .. text)
-		rconsolesettitle("ASTROSPLOIT is NOT fat!")
+		rconsolesettitle("ASTROWARE is NOT fat!")
 	end
 	
 	getgenv().rconsolewarn = function(...)
@@ -1059,15 +1059,15 @@ if not shared.vulnsm then
 			text = text .. tostring(v) .. " "
 		end
 		Bridge:rconsole("prt", "[ WARNING ] " .. text)
-		rconsolesettitle("ASTROSPLOIT is NOT fat!")
+		rconsolesettitle("ASTROWARE is NOT fat!")
 	end
 	getgenv().rconsoleinput = function(text)
 		Bridge:rconsole("prt", "[ ERROR ] Input doesnt work")
-		rconsolesettitle("ASTROSPLOIT is NOT fat!")
+		rconsolesettitle("ASTROWARE is NOT fat!")
 	end
 	getgenv().rconsoleerr = function(text)
 		Bridge:rconsole("prt", "[ ERROR ] " .. text)
-		rconsolesettitle("ASTROSPLOIT is NOT fat!")
+		rconsolesettitle("ASTROWARE is NOT fat!")
 	end 
 	getgenv().rconsoleerror = getgenv().rconsoleerr 
 	getgenv().rconsolename = getgenv().rconsolesettitle
@@ -1356,7 +1356,7 @@ if not shared.vulnsm then
 			meta.__index = function(s,k)
 				if table.find(vulnFuncTbl, k) then 
 					return function()
-						error("[ ASTROSPLOIT ]: "..tostring(k).." isn't available.")
+						error("[ ASTROWARE ]: "..tostring(k).." isn't available.")
 					end
 				elseif k == "GetObjects" or k == "LoadLocalAsset" or k == "LoadAsset" then
 					return function(self, id)
@@ -1453,7 +1453,7 @@ if not shared.vulnsm then
 			return oldlf(path)
 		end 
 	end
-	print("[ ASTROSPLOIT ]: Vulns mitigated.")
+	print("[ ASTROWARE ]: Vulns mitigated.")
 	shared.vulnsm = true 
 end 
 getgenv().getscripts = function() 
@@ -1529,8 +1529,8 @@ getgenv().getscriptclosure = function(module)
         return copy
     end
 end
-print("[ ASTROSPLOIT ]: Added functions to the env.")
---getgenv().IS_ASTROSPLOIT_LOADED = true
+print("[ ASTROWARE ]: Added functions to the env.")
+--getgenv().IS_ASTROWARE_LOADED = true
 
 local Workspace = game:FindService("Workspace") or game.Workspace
 local RobloxWorkspace = game:FindService("Workspace") or game.Workspace
@@ -1564,7 +1564,7 @@ local RobloxTestService = cloneref(game:FindService("TestService"))
 --[[
 getgenv().gethui = function() -- thanks to salad for this
     local f = Instance.new("Folder")
-    f.name = "Astrosploit HUI"
+    f.name = "ASTROWARE HUI"
     f.parent = game:GetService("CoreGui"):FindFirstChild("RobloxGui")
     return f
 end
@@ -2164,6 +2164,6 @@ check("setrbxclipboard", function()
     setrbxclipboard = setclipboard
 end)
 
-print("[ Astrosploit Info ] Loaded functions!")
---loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/astrosploit/refs/heads/main/ui.lua"))()
---print("[ Astrosploit Info ] UI Loaded! Enjoy!")
+print("[ Astro Info ] Loaded functions!")
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/ASTROWARE/refs/heads/main/ui.lua"))()
+--print("[ ASTROWARE Info ] UI Loaded! Enjoy!")
