@@ -1,9 +1,6 @@
 --[[
-  // CheatFrame Environment
-  // Made by the CheatFrame devs.
-  // (all of it was made by raz & salad <3)
-  // If you use this and don't credit us, we can DMCA you.
-  // - The CheatFrame Developers
+  // The CheatFrame "Environment" (or "Script Execution Environment") is a copyrighted material of CheatFrame.
+  // Unauthorized use will lead to legal consequences.
 ]]
 
 --[[
