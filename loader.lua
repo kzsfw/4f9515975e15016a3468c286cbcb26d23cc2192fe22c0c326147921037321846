@@ -1,22 +1,22 @@
 --[[
-  // ASTROWARE Environment
-  // Made by the ASTROWARE devs.
+  // CheatFrame Environment
+  // Made by the CheatFrame devs.
   // (all of it was made by raz & salad <3)
   // If you use this and don't credit us, we can DMCA you.
-  // - The ASTROWARE Developers
+  // - The CheatFrame Developers
 ]]
 
 --[[
 CURRENT: ENV Version 1
 ]]
--- Made for ASTROWARE
+-- Made for CheatFrame
 
 WORKING = true -- true to enable script
 
 function killSwitch()
     if not WORKING then
         game:GetService("StarterGui"):SetCore("SendNotification", {
-            Title = ">[ASTROWARE V1]<";
+            Title = ">[CheatFrame V1]<";
             Text = "Sorry, the exploit is killswitched. Try again later!";
             Duration = 5;
         })
@@ -26,22 +26,22 @@ function killSwitch()
 end
 
 if not killSwitch() then return end
-execver = "V1"
-function getexecutorname() return "Astro-Ware" end
+execver = "0.9"
+function getexecutorname() return "CheatFrame" end
 
 -- SaladAPI ENV | thanks to discord.gg/getsalad
 
 function iy() loadstring(game:HttpGet("https://raw.githubusercontent.com/edgeiy/infiniteyield/master/source"))() end
 
-function identifyexecutor() return "Astro-Ware", execver end
+function identifyexecutor() return "CheatFrame", execver end
 
---getgenv().IS_ASTROWARE_LOADED = false
+--getgenv().IS_CheatFrame_LOADED = false
 local oldr = request 
 getgenv().request = function(options)
 	if options.Headers then
-		options.Headers["User-Agent"] = "AstroWare/RobloxApp/" .. execver
+		options.Headers["User-Agent"] = "CheatFrame/RobloxApp/" .. execver
 	else
-		options.Headers = {["User-Agent"] = "AstroWare/RobloxApp/" .. execver}
+		options.Headers = {["User-Agent"] = "CheatFrame/RobloxApp/" .. execver}
 	end
 	local response = oldr(options)
 	return response
@@ -66,7 +66,7 @@ getgenv().require = function(scr) -- not mine
 	assert(type(scr) == "number" or (typeof(scr) == "Instance" and scr.ClassName == "ModuleScript"), "Expected")
 	if (type(scr) == "number") then 
 		if not game:GetObjects('rbxassetid://' .. scr)[1] then 
-			warn("[ ASTROWARE ]: Require failed: invalid asset ID")
+			warn("[ CheatFrame ]: Require failed: invalid asset ID")
 			return 
 		end
 		if typeof(game:GetObjects('rbxassetid://' .. scr)[1]) == "Instance" and game:GetObjects('rbxassetid://' .. scr)[1].ClassName == "ModuleScript" then
@@ -74,18 +74,18 @@ getgenv().require = function(scr) -- not mine
 				if game:GetObjects('rbxassetid://' .. scr)[1].Source ~= "" then 
 					return loadstring(game:GetObjects('rbxassetid://' .. scr)[1].Source)()
 				else 
-					warn("[ ASTROWARE ]: Require failed: cant require a modulescript with no code")
+					warn("[ CheatFrame ]: Require failed: cant require a modulescript with no code")
 				end
 			else 
-				warn("[ ASTROWARE ]: Require failed: require asset id failed")
+				warn("[ CheatFrame ]: Require failed: require asset id failed")
 			end
 		end
 		return
 	end
 end
 
---loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/ASTROWARE/refs/heads/main/ui.lua"))()
---print("[ ASTROWARE Info ] UI Loaded! Enjoy!")
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/CheatFrame/refs/heads/main/ui.lua"))()
+--print("[ CheatFrame Info ] UI Loaded! Enjoy!")
 
 getgenv().shared = shared 
 local renv = {
@@ -225,9 +225,9 @@ end, function()
 end)
 
 check("getaffiliateid", function()
-    return "ASTROWARE"
+    return "CheatFrame"
 end, function()
-    assert(getgenv().getaffiliateid() == "ASTROWARE", "getaffiliateid function test failed")
+    assert(getgenv().getaffiliateid() == "CheatFrame", "getaffiliateid function test failed")
 end)
 
 check("getplayer", function(name: string)
@@ -912,7 +912,7 @@ function Bridge:InternalRequest(body, timeout)
 			return
 		end
 
-		error("[ASTROWARE Error]: Unknown error", 2)
+		error("[CheatFrame Error]: Unknown error", 2)
 		return
 	end
 
@@ -946,10 +946,10 @@ function Bridge:InternalRequest(body, timeout)
 	end)
 
 	if success and result then
-		error("[ASTROWARE Error]: " .. tostring(result), 2)
+		error("[CheatFrame Error]: " .. tostring(result), 2)
 	end
 
-	error("[ASTROWARE Error]: Unknown server error", 2)
+	error("[CheatFrame Error]: Unknown server error", 2)
 end
 
 function Bridge:request(options)
@@ -980,7 +980,7 @@ function Bridge:request(options)
 	end
 	return {
 		Success = false,
-		StatusMessage = "[ASTROWARE Error]: webServer connection failed:  " .. self.serverUrl,
+		StatusMessage = "[CheatFrame Error]: webServer connection failed:  " .. self.serverUrl,
 		StatusCode = 599;
 		HttpError = Enum.HttpError.ConnectFail
 	}
@@ -1021,17 +1021,17 @@ if not shared.vulnsm then
 	end
 	getgenv().rconsoleclear = function()
 		Bridge:rconsole("cls") 
-		rconsolesettitle("ASTROWARE is NOT fat!")
+		rconsolesettitle("CheatFrame is NOT fat!")
 	end
 	
 	getgenv().rconsolecreate = function()
 		Bridge:rconsole("crt")
-		rconsolesettitle("ASTROWARE is NOT fat!")
+		rconsolesettitle("CheatFrame is NOT fat!")
 	end
 	
 	getgenv().rconsoledestroy = function()
 		Bridge:rconsole("dst")
-		rconsolesettitle("ASTROWARE is NOT fat!")
+		rconsolesettitle("CheatFrame is NOT fat!")
 	end
 	
 	getgenv().rconsoleprint = function(...)
@@ -1040,7 +1040,7 @@ if not shared.vulnsm then
 			text = text .. tostring(v) .. " "
 		end
 		Bridge:rconsole("prt", text)
-		rconsolesettitle("ASTROWARE is NOT fat!")
+		rconsolesettitle("CheatFrame is NOT fat!")
 	end
 	
 	getgenv().rconsoleinfo = function(...)
@@ -1049,7 +1049,7 @@ if not shared.vulnsm then
 			text = text .. tostring(v) .. " "
 		end
 		Bridge:rconsole("prt", "[ INFO ] " .. text)
-		rconsolesettitle("ASTROWARE is NOT fat!")
+		rconsolesettitle("CheatFrame is NOT fat!")
 	end
 	
 	getgenv().rconsolewarn = function(...)
@@ -1058,15 +1058,15 @@ if not shared.vulnsm then
 			text = text .. tostring(v) .. " "
 		end
 		Bridge:rconsole("prt", "[ WARNING ] " .. text)
-		rconsolesettitle("ASTROWARE is NOT fat!")
+		rconsolesettitle("CheatFrame is NOT fat!")
 	end
 	getgenv().rconsoleinput = function(text)
 		Bridge:rconsole("prt", "[ ERROR ] Input doesnt work")
-		rconsolesettitle("ASTROWARE is NOT fat!")
+		rconsolesettitle("CheatFrame is NOT fat!")
 	end
 	getgenv().rconsoleerr = function(text)
 		Bridge:rconsole("prt", "[ ERROR ] " .. text)
-		rconsolesettitle("ASTROWARE is NOT fat!")
+		rconsolesettitle("CheatFrame is NOT fat!")
 	end 
 	getgenv().rconsoleerror = getgenv().rconsoleerr 
 	getgenv().rconsolename = getgenv().rconsolesettitle
@@ -1355,7 +1355,7 @@ if not shared.vulnsm then
 			meta.__index = function(s,k)
 				if table.find(vulnFuncTbl, k) then 
 					return function()
-						error("[ ASTROWARE ]: "..tostring(k).." isn't available.")
+						error("[ CheatFrame ]: "..tostring(k).." isn't available.")
 					end
 				elseif k == "GetObjects" or k == "LoadLocalAsset" or k == "LoadAsset" then
 					return function(self, id)
@@ -1452,7 +1452,7 @@ if not shared.vulnsm then
 			return oldlf(path)
 		end 
 	end
-	print("[ ASTROWARE ]: Vulns mitigated.")
+	print("[ CheatFrame ]: Vulns mitigated.")
 	shared.vulnsm = true 
 end 
 getgenv().getscripts = function() 
@@ -1528,8 +1528,8 @@ getgenv().getscriptclosure = function(module)
         return copy
     end
 end
-print("[ ASTROWARE ]: Added functions to the env.")
---getgenv().IS_ASTROWARE_LOADED = true
+print("[ CheatFrame ]: Added functions to the env.")
+--getgenv().IS_CheatFrame_LOADED = true
 
 local Workspace = game:FindService("Workspace") or game.Workspace
 local RobloxWorkspace = game:FindService("Workspace") or game.Workspace
@@ -1563,7 +1563,7 @@ local RobloxTestService = cloneref(game:FindService("TestService"))
 --[[
 getgenv().gethui = function() -- thanks to salad for this
     local f = Instance.new("Folder")
-    f.name = "ASTROWARE HUI"
+    f.name = "CheatFrame HUI"
     f.parent = game:GetService("CoreGui"):FindFirstChild("RobloxGui")
     return f
 end
@@ -2164,5 +2164,5 @@ check("setrbxclipboard", function()
 end)
 
 print("[ Astro Info ] Loaded functions!")
---loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/ASTROWARE/refs/heads/main/ui.lua"))()
---print("[ ASTROWARE Info ] UI Loaded! Enjoy!")
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/CheatFrame/refs/heads/main/ui.lua"))()
+--print("[ CheatFrame Info ] UI Loaded! Enjoy!")
