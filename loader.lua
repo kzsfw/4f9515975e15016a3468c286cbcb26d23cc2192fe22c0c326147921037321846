@@ -2160,6 +2160,6 @@ check("setrbxclipboard", function()
     setrbxclipboard = setclipboard
 end)
 
-print("[ Astro Info ] Loaded functions!")
+print("[ CF Info ] Loaded functions!")
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/skidsploiter/CheatFrame/refs/heads/main/ui.lua"))()
 --print("[ CheatFrame Info ] UI Loaded! Enjoy!")
